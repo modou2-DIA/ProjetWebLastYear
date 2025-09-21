@@ -1,0 +1,37 @@
+<main class="main-login">
+    <div class="left-login">
+        <h1>Connectez-vous<br>Et accédez à vos réservations</h1>
+        <img src="https://i.postimg.cc/NFh679k6/educationlogo.avif" class="left-login-img" alt="astronaut image">
+    </div>
+
+    <div class="right-login">
+        <div class="card-login">
+            <h1>Login</h1>
+
+            <!-- Affichage des erreurs -->
+            <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+
+            <div class="textfield">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Votre email " [(ngModel)]="loginObj.email">
+            </div>
+
+            <div class="textfield">
+                <label for="mdp">Mot de passe</label>
+                <input type="password" id="mdp" name="mdp" placeholder="Votre mot de passe "
+                    [(ngModel)]="loginObj.password">
+            </div>
+
+            <button class="btn-login" (click)="login()">Login
+
+            </button> 
+            <div class="d-grid gap-2">
+                
+                <button type="button" class="btn "  href="/register">
+                    <a class="nav-link" href="/register"> Pas de  compte ? S'inscrire</a>
+                 
+                </button>
+              </div>
+        </div>
+    </div>
+</main>
